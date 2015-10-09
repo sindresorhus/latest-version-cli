@@ -1,0 +1,47 @@
+{
+  "name": "latest-version-cli",
+  "version": "0.0.0",
+  "description": "Get the latest version of a npm package",
+  "license": "MIT",
+  "repository": "sindresorhus/latest-version-cli",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "bin": {
+    "latest-version": "cli.js"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "latest",
+    "version",
+    "npm",
+    "pkg",
+    "package",
+    "package.json",
+    "current",
+    "module"
+  ],
+  "dependencies": {
+    "latest-version": "^2.0.0",
+    "meow": "^3.4.2"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true
+  }
+}
