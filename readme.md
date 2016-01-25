@@ -1,6 +1,6 @@
 # latest-version-cli [![Build Status](https://travis-ci.org/sindresorhus/latest-version-cli.svg?branch=master)](https://travis-ci.org/sindresorhus/latest-version-cli)
 
-> Get the latest version of a npm package
+> Get the latest version of an npm package
 
 
 ## Install
