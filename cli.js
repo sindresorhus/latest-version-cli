@@ -17,4 +17,11 @@ if (cli.input.length === 0) {
 	process.exit(1);
 }
 
+if (cli.input[0] === '.') {
+	const version = require(process.env.PWD + '/package.json').version;
+	console.log(version);
+	process.exit(1);
+ }
+
+
 latestVersion(cli.input[0]).then(console.log);
