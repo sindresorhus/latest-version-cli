@@ -17,10 +17,13 @@ $ latest-version --help
 
   Usage
     $ latest-version <package-name>
+		$ latest-version .
 
   Example
     $ latest-version ava
     0.2.0
+		$ latest-version .
+		1.1.1 <-- returns version of current directory package.json `version`
 ```
 
 
