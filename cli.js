@@ -9,7 +9,7 @@ const cli = meow(`
 
 	Example
 	  $ latest-version ava
-	  0.2.0
+	  0.18.0
 `);
 
 if (cli.input.length === 0) {

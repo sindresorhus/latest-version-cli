@@ -34,14 +34,13 @@
     "module"
   ],
   "dependencies": {
-    "latest-version": "^2.0.0",
+    "latest-version": "^3.0.0",
     "meow": "^3.4.2"
   },
   "devDependencies": {
     "ava": "*",
+    "execa": "^0.6.0",
+    "semver-regex": "^1.0.0",
     "xo": "*"
-  },
-  "xo": {
-    "esnext": true
   }
 }

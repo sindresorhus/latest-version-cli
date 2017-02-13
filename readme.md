@@ -20,7 +20,7 @@ $ latest-version --help
 
   Example
     $ latest-version ava
-    0.2.0
+    0.18.0
 ```
 
 
@@ -31,4 +31,4 @@ $ latest-version --help
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

@@ -1,12 +1,8 @@
-import childProcess from 'child_process';
 import test from 'ava';
+import execa from 'execa';
+import semverRegex from 'semver-regex';
 
-test.cb(t => {
-	childProcess.execFile('./cli.js', ['ava'], {
-		cwd: __dirname
-	}, (err, stdout) => {
-		t.ifError(err);
-		t.true(stdout.trim().length > 0);
-		t.end();
-	});
+test(async t => {
+	const {stdout} = await execa('./cli.js', ['ava']);
+	t.regex(stdout, semverRegex());
 });
