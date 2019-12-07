@@ -15,12 +15,19 @@ $ npm install --global latest-version-cli
 ```
 $ latest-version --help
 
-  Usage
-    $ latest-version <package-name>
+	Usage
+		$ latest-version <package-name> [options...]
 
-  Example
-    $ latest-version ava
-    0.18.0
+	Options
+		-v       	Ouput current version number of this module
+		--version	Specify which dist-tag to use to find the latest version
+
+	Example
+	  $ latest-version ava
+		2.4.0
+
+		$ latest-version ava --version=next
+		2.0.0-rc.1
 ```
 
 
