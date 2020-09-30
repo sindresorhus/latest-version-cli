@@ -9,7 +9,7 @@ const cli = meow(`
 
 	Options
 	  -v         Ouput the version of this package
-	  --version  Specify which dist-tag to use to find the latest version
+	  --version  Specify which semver-range to use to find the latest version
 
 	Example
 	  $ latest-version ava
