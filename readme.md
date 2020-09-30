@@ -20,13 +20,13 @@ $ latest-version --help
 
   Options
     -v         Ouput the version of this package
-    --version  Specify which dist-tag to use to find the latest version
+    --range    Specify which dist-tag to use to find the latest version
 
   Example
     $ latest-version ava
     2.4.0
 
-    $ latest-version ava --version=next
+    $ latest-version ava --range=next
     2.0.0-rc.1
 ```
 

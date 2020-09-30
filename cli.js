@@ -18,7 +18,12 @@ const cli = meow(`
 	  $ latest-version ava --version=next
 	  2.0.0-rc.1
 `, {
-	autoVersion: false
+	autoVersion: false,
+	flags: {
+		range: {
+			type: 'string'
+		}
+	}
 });
 
 if (cli.flags.v) {
@@ -31,6 +36,8 @@ if (cli.input.length === 0) {
 }
 
 (async () => {
-	const result = await latestVersion(cli.input[0], cli.flags);
+	const {range: version} = cli.flags;
+
+	const result = await latestVersion(cli.input[0], version ? {version} : {});
 	console.log(result);
 })();
