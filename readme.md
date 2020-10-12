@@ -20,7 +20,7 @@ $ latest-version --help
 
   Options
     -v         Ouput the version of this package
-    --range    Specify which semver-range to use to find the latest version
+    --range    Specify which semver range to use to find the latest version
 
   Example
     $ latest-version ava
