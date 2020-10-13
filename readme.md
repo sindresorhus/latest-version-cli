@@ -19,7 +19,6 @@ $ latest-version --help
     $ latest-version <package-name>
 
   Options
-    -v         Ouput the version of this package
     --range    Specify which semver range to use to find the latest version
 
   Example
