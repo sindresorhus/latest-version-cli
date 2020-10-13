@@ -18,9 +18,6 @@ const cli = meow(`
 	  2.0.0-rc.1
 `, {
 	flags: {
-		v: {
-			alias: 'version'
-		},
 		range: {
 			type: 'string'
 		}
