@@ -8,27 +8,24 @@ const cli = meow(`
 	  $ latest-version <package-name>
 
 	Options
-	  -v         Ouput the version of this package
-	  --version  Specify which semver-range to use to find the latest version
+	  --range  Specify which semver range to use to find the latest version
 
 	Example
 	  $ latest-version ava
-	  2.4.0
+	  3.13.0
 
 	  $ latest-version ava --version=next
 	  2.0.0-rc.1
 `, {
-	autoVersion: false,
 	flags: {
+		v: {
+			alias: 'version'
+		},
 		range: {
 			type: 'string'
 		}
 	}
 });
-
-if (cli.flags.v) {
-	cli.showVersion();
-}
 
 if (cli.input.length === 0) {
 	console.error('Please specify a package name');

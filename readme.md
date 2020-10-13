@@ -24,7 +24,7 @@ $ latest-version --help
 
   Example
     $ latest-version ava
-    2.4.0
+    3.13.0
 
     $ latest-version ava --range=next
     2.0.0-rc.1

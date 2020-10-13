@@ -13,7 +13,7 @@
     "latest-version": "cli.js"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "scripts": {
     "test": "xo && ava"
@@ -35,12 +35,12 @@
   ],
   "dependencies": {
     "latest-version": "^5.1.0",
-    "meow": "^6.0.0"
+    "meow": "^7.1.1"
   },
   "devDependencies": {
-    "ava": "^2.4.0",
-    "execa": "^3.4.0",
-    "semver-regex": "^3.1.0",
-    "xo": "^0.25.3"
+    "ava": "^3.13.0",
+    "execa": "^4.0.3",
+    "semver-regex": "^3.1.1",
+    "xo": "^0.33.1"
   }
 }
