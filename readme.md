@@ -25,8 +25,8 @@ $ latest-version --help
     $ latest-version ava
     3.13.0
 
-    $ latest-version ava --range=next
-    2.0.0-rc.1
+    $ latest-version electron --range=beta
+    11.0.0-beta.11
 ```
 
 
