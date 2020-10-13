@@ -19,7 +19,7 @@ $ latest-version --help
     $ latest-version <package-name>
 
   Options
-    --range    Specify which semver range to use to find the latest version
+    --range  Specify which semver range to use to find the latest version
 
   Example
     $ latest-version ava
