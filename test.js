@@ -1,6 +1,6 @@
-const test = require('ava');
-const execa = require('execa');
-const semverRegex = require('semver-regex');
+import test from 'ava';
+import execa from 'execa';
+import semverRegex from 'semver-regex';
 
 test('main', async t => {
 	const {stdout} = await execa('./cli.js', ['ava']);

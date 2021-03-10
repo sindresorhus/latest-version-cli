@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-'use strict';
-const meow = require('meow');
-const latestVersion = require('latest-version');
+import meow from 'meow';
+import latestVersion from 'latest-version';
 
 const cli = meow(`
 	Usage
@@ -10,10 +9,9 @@ const cli = meow(`
 	Options
 	  --range  Specify which semver range to use to find the latest version
 
-	Example
+	Examples
 	  $ latest-version ava
 	  3.13.0
-
 	  $ latest-version electron --range=beta
 	  11.0.0-beta.11
 `, {
