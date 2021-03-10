@@ -18,9 +18,15 @@ $ latest-version --help
   Usage
     $ latest-version <package-name>
 
+  Options
+    --range  Specify which semver range to use to find the latest version
+
   Example
     $ latest-version ava
-    0.18.0
+    3.13.0
+
+    $ latest-version electron --range=beta
+    11.0.0-beta.11
 ```
 
 
