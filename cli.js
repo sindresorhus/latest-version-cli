@@ -15,11 +15,12 @@ const cli = meow(`
 	  $ latest-version electron --range=beta
 	  11.0.0-beta.11
 `, {
+	importMeta: import.meta,
 	flags: {
 		range: {
-			type: 'string'
-		}
-	}
+			type: 'string',
+		},
+	},
 });
 
 if (cli.input.length === 0) {
