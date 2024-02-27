@@ -1,13 +1,17 @@
 #!/usr/bin/env node
+import process from 'node:process';
 import meow from 'meow';
-import latestVersion from 'latest-version';
+import latestVersion, {PackageNotFoundError, VersionNotFoundError} from 'latest-version';
+import logSymbols from 'log-symbols';
 
 const cli = meow(`
 	Usage
 	  $ latest-version <package-name>
 
 	Options
-	  --range  Specify which semver range to use to find the latest version
+	  --range          Specify which semver range to use to find the latest version
+	  --registry-url   Custom registry URL
+	  --no-deprecated  Omit deprecated versions
 
 	Examples
 	  $ latest-version ava
@@ -20,6 +24,13 @@ const cli = meow(`
 		range: {
 			type: 'string',
 		},
+		registryUrl: {
+			type: 'string',
+		},
+		deprecated: {
+			type: 'boolean',
+			default: true,
+		},
 	},
 });
 
@@ -28,9 +39,21 @@ if (cli.input.length === 0) {
 	process.exit(1);
 }
 
-(async () => {
-	const {range: version} = cli.flags;
+const options = {
+	version: cli.flags.range,
+	registryUrl: cli.flags.registryUrl,
+	omitDeprecated: !cli.flags.deprecated,
+};
 
-	const result = await latestVersion(cli.input[0], version ? {version} : {});
+try {
+	const result = await latestVersion(cli.input[0], options);
 	console.log(result);
-})();
+} catch (error) {
+	if (error instanceof PackageNotFoundError || error instanceof VersionNotFoundError) {
+		console.error(`${logSymbols.error} ${error.message}.`);
+		process.exitCode = 1;
+	} else {
+		throw error;
+	}
+}
+

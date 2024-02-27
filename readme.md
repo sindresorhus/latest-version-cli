@@ -4,8 +4,8 @@
 
 ## Install
 
-```
-$ npm install --global latest-version-cli
+```sh
+npm install --global latest-version-cli
 ```
 
 ## Usage
@@ -17,7 +17,9 @@ $ latest-version --help
     $ latest-version <package-name>
 
   Options
-    --range  Specify which semver range to use to find the latest version
+    --range          Specify which semver range to use to find the latest version
+    --registry-url   Custom registry URL
+    --no-deprecated  Omit deprecated versions
 
   Examples
     $ latest-version ava

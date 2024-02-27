@@ -12,10 +12,10 @@
 	},
 	"type": "module",
 	"bin": {
-		"latest-version": "cli.js"
+		"latest-version": "./cli.js"
 	},
 	"engines": {
-		"node": ">=12"
+		"node": ">=18"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -35,13 +35,14 @@
 		"module"
 	],
 	"dependencies": {
-		"latest-version": "^6.0.0",
-		"meow": "^10.1.0"
+		"latest-version": "^9.0.0",
+		"log-symbols": "^6.0.0",
+		"meow": "^13.2.0"
 	},
 	"devDependencies": {
-		"ava": "^3.15.0",
-		"execa": "^5.1.1",
-		"semver-regex": "^4.0.0",
-		"xo": "^0.42.0"
+		"ava": "^6.1.1",
+		"execa": "^8.0.1",
+		"semver-regex": "^4.0.5",
+		"xo": "^0.57.0"
 	}
 }
