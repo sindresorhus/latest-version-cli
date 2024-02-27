@@ -4,8 +4,8 @@
 
 ## Install
 
-```
-$ npm install --global latest-version-cli
+```sh
+npm install --global latest-version-cli
 ```
 
 ## Usage
@@ -17,13 +17,15 @@ $ latest-version --help
     $ latest-version <package-name>
 
   Options
-    --range  Specify which semver range to use to find the latest version
+    --range          Specify which semver range to use to find the latest version
+    --registry-url   Custom registry URL
+    --no-deprecated  Omit deprecated versions
 
   Examples
     $ latest-version ava
-    3.13.0
+    6.1.1
     $ latest-version electron --range=beta
-    11.0.0-beta.11
+    29.0.0-beta.12
 ```
 
 ## Related
